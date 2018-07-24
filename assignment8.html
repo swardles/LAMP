@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> US County Information</title>
+	<link rel= "stylesheet" type = "text/css" href = "assignment8.css">
+</head>
+
+<body>
+	<h3> US County Information</h3>
+	<h2> This data is from the State Based Counties Gazetteer File, and can be found by following this link: https://www.census.gov/geo/maps-data/data/gazetteer2010.html. This data set holds information regarding the counties of all 50 states, Puerto Rico and Washington D.C. after the 2010 census and includes information such as US state abbreviations, GEO ID, institute code, name of county, population, housing units, land area (in both miles and meters), water area (in both miles and meters), latitude and longitude. Each line of the data is a specific county instance and holds all the data related to that county pertaining to the previously mentioned data fields (information). This site allows you, the user, to choose and display the data sorted by state, number of counties to be seen and population (both ascending and descending). This program is meant to give the user easy access to a few of the states' data that can be found in the large data set on US counties. Although the data is not test data, the current site is more of a test site, and does not allow the user to query for all data in the database. </h2>
+
+	
+	<hr>
+	<form action = "assignment8.py" method = "POST">
+		<p>Select a State to view:</p>
+		<select name = "state">
+			<option value = "AL">Alabama</option>
+			<option value = "CA">California</option>
+			<option value = "NJ">New Jersey</option>
+			<option value = "NY">New York</option>
+			<option value = "OR">Oregon</option>
+		</select>
+		<p>How many counties would you like to see for this state?</p>
+		<select name = "quantity">
+			<option>5</option>
+			<option>10</option>
+			<option>15</option>
+			<option>20</option>
+		</select>
+		<p>How would you like to see the data sorted?</p>
+		<select name = "sorting">
+			<option value = "name">County Name</option>
+			<option value = "population">Population (ascending)</option>
+			<option value = "population DESC">Population (descending)</option>
+		</select>
+		<hr>
+		<br>
+		<p>
+		<input type="submit" name="Submit">
+		<input type="reset" name="Never mind">
+		</p>
+	</form>
+</body>
+</html>
